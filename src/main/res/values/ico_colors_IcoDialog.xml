@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dialog-->
+    <color name="dialog_theme">#F5F5F5</color>
+    <color name="dialog_title">#33B4E4</color>
+    <color name="dialog_title_line">#33B4E4</color>
+    <color name="dialog_message">#000000</color>
+    <color name="dialog_button">#33B4E4</color>
+    <color name="dialog_button_line">#33B4E4</color>
+</resources>

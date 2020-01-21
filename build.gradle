@@ -1,0 +1,158 @@
+apply plugin: 'com.android.library'
+
+//region 这部分代码需要拷贝到app的build.gradle
+android {
+    /*jackson和RX必要配置,该配置需要设置到app的build中*/
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+/*endless必要配置,该配置需要设置到app的build中*/
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+//endregion
+
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.fasterxml.jackson.core:jackson-databind:2.7.1'
+    api 'com.fasterxml.jackson.core:jackson-core:2.7.1'
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.7.1'
+    api 'com.android.support:support-v4:28.+'
+    api 'com.android.support:appcompat-v7:28.+'
+    api 'com.android.support:recyclerview-v7:28.+'
+
+    //加载更多 https://github.com/ybq/Endless-RecyclerView
+    api 'com.github.ybq:Endless-RecyclerView:1.0.3'
+    api 'com.squareup.okhttp3:okhttp:3.5.0'
+
+    //----------rx-----------
+    api 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+
+    //    api 'io.reactivex:rxandroid:1.2.1'
+
+    //    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
+    //    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    api 'com.trello:rxlifecycle-components:1.0'
+
+    //----------rx-----------
+
+    /*根据需要自己精简一部分用不到的，在一般项目中下面这些都可以被精简掉*/
+
+    //低版本兼容包,在DragGridView中有使用
+    api 'com.nineoldandroids:library:2.4.0'
+
+    //    api 'javax.activation:activation:1.1.1'
+
+    /* 图片加载器 */
+
+    //主要用在ico.ico.widget.imageview中
+    api 'com.squareup.picasso:picasso:2.71828'
+
+    //imageloader,图片加载器
+    api 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //glide
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //可以在低版本api中使用高版本的样式
+
+    //    api 'com.avast:android-styled-dialogs:2.3.3'
+
+    //垂直的viewpager
+    api 'com.github.castorflex.verticalviewpager:library:19.0.1'
+
+    //图片选择器,原项目galleryfinal已迁移至rxgalleryfinal https://github.com/FinalTeam/RxGalleryFinal
+    api 'cn.finalteam.rxgalleryfinal:library:1.1.3'
+
+    //tabLayout项目需求下划线比文字,宽度小,所以迁出源码,重构了下,BaseLayout和MyLayout
+    api 'com.android.support:design:28.+'
+
+    //选择滚轮
+
+    //    api 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+
+    //加载动画,搭配recycler endless https://github.com/ybq/Android-SpinKit
+
+    //    api 'com.github.ybq:Android-SpinKit:1.1.0'
+
+    //时间选择的dialog
+
+    //    api 'com.code-troopers.betterpickers:library:3.1.0'
+
+    //第三方的时间,可以计算两个时间的差,单位有多种可选
+
+    //    api 'joda-time:joda-time:2.3'
+
+    //ViewPager的圆点指示器
+
+    //    api 'me.relex:circleindicator:1.2.2'
+
+    //安卓6.0运行时权限获取  https://github.com/googlesamples/easypermissions
+    api 'pub.devrel:easypermissions:2.0.0'
+
+    //mqtt
+    api 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+
+    //recyclerview,自动换行,流式布局,通过FlowLayoutManager计算总体高度,在recyclerview初始化完成后设置recyclerview高度即可
+
+    //    api 'com.github.1002326270xc:LayoutManager-FlowLayout:v1.3'
+
+    //侧滑删除   https://github.com/daimajia/AndroidSwipeLayout
+    api 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    //butterknife https://github.com/JakeWharton/butterknife 需要放到app的module才有用
+    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+}
+/*同步support包版本*/
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.+'
+            }
+        }
+    }
+}
+/*解决在编译时一个findbugs的编译报错*/
+configurations.all {
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+}
+
+// Required because retrolambda is on maven central
+repositories {
+    mavenCentral()
+}

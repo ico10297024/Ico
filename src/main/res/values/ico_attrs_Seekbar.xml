@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcSeekBar">
+        <attr name="android:thumb"/>
+        <attr name="android:max"/>
+        <attr name="android:progress"/>
+        <attr name="strokeWidth"/>
+        <attr name="trackColor"/>
+        <attr name="progressColor"/>
+        <attr name="paintCap"/>
+
+        <attr name="showProgressText"/>
+        <attr name="progressTextStrokeWidth"/>
+        <attr name="progressTextColor"/>
+        <attr name="progressTextSize"/>
+        <!--起始的角度-->
+        <attr name="startAngle"/>
+        <!--弧持续的角度-->
+        <attr name="sweepAngle"/>
+    </declare-styleable>
+    <declare-styleable name="CircleSeekBar">
+        <attr name="android:thumb"/>
+        <attr name="android:max"/>
+        <attr name="android:progress"/>
+        <attr name="strokeWidth"/>
+        <attr name="trackColor"/>
+        <attr name="progressColor"/>
+        <attr name="paintCap"/>
+
+        <attr name="showProgressText"/>
+        <attr name="progressTextStrokeWidth"/>
+        <attr name="progressTextColor"/>
+        <attr name="progressTextSize"/>
+        <!--起始的角度-->
+        <attr name="startAngle"/>
+        <!--弧持续的角度-->
+        <attr name="sweepAngle"/>
+    </declare-styleable>
+</resources>

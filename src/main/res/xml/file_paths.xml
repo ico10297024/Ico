@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="AutoUpdate"
+        path="Download/AutoUpdate" />
+    <!--<external-path name="name" path="Download/AutoUpdate" />-->
+</paths>

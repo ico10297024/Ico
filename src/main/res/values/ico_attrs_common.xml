@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用于绘制圆形或弧形时，开始角度的设置-->
+    <attr name="startAngle" format="float"/>
+    <!--用于绘制圆形或弧形时，持续角度的设置-->
+    <attr name="sweepAngle" format="float"/>
+
+    <!--下面6个用于设置背景和前景色的渐变-->
+    <attr name="bgColorStart" format="color"/>
+    <attr name="bgColorMiddle" format="color"/>
+    <attr name="bgColorEnd" format="color"/>
+    <attr name="fgColorStart" format="color"/>
+    <attr name="fgColorMiddle" format="color"/>
+    <attr name="fgColorEnd" format="color"/>
+    <!--用于在设置控件是否自定义那个高度-->
+    <attr name="autoAdaptive" format="boolean" comment="用于自适应高度的属性"></attr>
+
+    <!--用于设置控件的绘制区域-->
+    <!--square将强制控件的绘制区域为正方形，取最小的边-->
+    <attr name="scale" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="square" value="1"/>
+    </attr>
+
+    <!--轨道的颜色-->
+    <attr name="trackColor" format="color"/>
+    <!--进度条的颜色-->
+    <attr name="progressColor" format="color"/>
+    <!--中间是否显示进度文本-->
+    <attr name="showProgressText" format="boolean"/>
+    <!--进度文本的线条宽度-->
+    <attr name="progressTextStrokeWidth" format="dimension"/>
+    <!--进度文本的颜色-->
+    <attr name="progressTextColor" format="color"/>
+    <!--进度文本的大小-->
+    <attr name="progressTextSize" format="dimension"/>
+    <!--画笔的笔头样式-->
+    <attr name="paintCap" format="enum">
+        <enum name="butt" value="0"/>
+        <enum name="round" value="1"/>
+        <enum name="seqare" value="2"/>
+    </attr>
+</resources>

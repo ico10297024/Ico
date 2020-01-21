@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ico_network_connect_404">网络连接失败，请联系管理员！</string>
+    <string name="ico_network_request_timesout">网络请求超时！</string>
+    <string name="ico_network_server_timesout">服务器连接超时，请稍候再试！</string>
+    <string name="ico_network_parameter_analysis_error">参数解析错误，请检查网络状态！</string>
+    <string name="ico_network_internal_server_error">服务器出错，请联系管理员!</string>
+    <string name="ico_network_bad_request">错误的请求参数，请联系管理员！</string>
+    <string name="ico_network_no">当前没有网络，请检查网络状态！</string>
+    <string name="ico_network_connect_error">网络连接错误，请稍候再试！</string>
+    <string name="ico_network_connect_unknown_error">连接出错，请稍候再试！</string>
+</resources>

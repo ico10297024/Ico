@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--一些文本输入框的输入限制-->
+    <string name="digits_number_letter" formatted="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="digits_identity_no" formatted="false">0123456789xX</string>
+</resources>

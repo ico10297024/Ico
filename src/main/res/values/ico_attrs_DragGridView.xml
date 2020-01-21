@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DragGridView">
+        <!--是否启用拖拽功能-->
+        <attr name="drag" format="boolean"/>
+        <!--拖拽模式-->
+        <attr name="dragMode" format="enum">
+            <enum name="NORMAL" value="0"></enum>
+            <enum name="RESIDENT" value="1"></enum>
+        </attr>
+        <!--拖拽响应时间-->
+        <attr name="dragResponseTime" format="integer"/>
+        <!--震动时间-->
+        <attr name="vibrateTime" format="integer"/>
+        <!--拖拽时所有item的动画-->
+        <attr name="itemAnimation" format="reference"/>
+
+        <!--每次滚动的距离-->
+        <attr name="scrollOffset" format="integer"/>
+        <!--每次滚动的间隔-->
+        <attr name="scrollInterval" format="integer"/>
+
+        <!--拖拽镜像视图的动画-->
+        <attr name="dragViewAnimation" format="reference"/>
+        <!--拖拽镜像视图的透明度-->
+        <attr name="dragViewAlpha" format="float"/>
+
+        <!--拖拽镜像视图所表示item的动画-->
+        <attr name="dragItemAnimation" format="reference|enum">
+            <enum name="none" value="-1"/>
+        </attr>
+        <!--拖拽镜像视图所表示item的透明度-->
+        <attr name="dragItemAlpha" format="float"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,56 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ico.ico.ico"
+        >
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--蓝牙-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!--用于输出当前连接的设备-->
+    <uses-permission android:name="android.permission.DUMP"/>
+
+    <!--用于蒲公英平台Crash收集-->
+    <!-- 必选-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 网络通信-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取MAC地址-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 读写sdcard，storage等等 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 允许程序录制音频 -->
+    <!-- 可选-->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- 获取logcat日志 -->
+
+
+    <!--微信-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--3.0以下版本，震动需要权限-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!--用于解锁-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
+    <application
+            android:allowBackup="true"
+            android:supportsRtl="true"
+            >
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+</manifest>

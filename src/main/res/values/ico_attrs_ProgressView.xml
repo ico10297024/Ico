@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SectorProgressView">
+        <attr name="bgColor" format="color"/>
+        <attr name="fgColor" format="color"/>
+        <!--<attr name="bgColorStart" />
+        <attr name="bgColorMiddle" />
+        <attr name="bgColorEnd" />
+        <attr name="fgColorStart" />
+        <attr name="fgColorMiddle" />
+        <attr name="fgColorEnd" />-->
+        <attr name="android:progress"/>
+        <attr name="android:max"/>
+        <attr name="startAngle"/>
+        <attr name="scale"/>
+    </declare-styleable>
+
+    <declare-styleable name="ColorfulRingProgressView">
+        <attr name="bgColorStart"/>
+        <attr name="bgColorMiddle"/>
+        <attr name="bgColorEnd"/>
+        <attr name="fgColorStart"/>
+        <attr name="fgColorMiddle"/>
+        <attr name="fgColorEnd"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeCap" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+        <attr name="android:progress"/>
+        <attr name="android:max"/>
+        <attr name="startAngle"/>
+        <attr name="scale"/>
+
+    </declare-styleable>
+
+</resources>

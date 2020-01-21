@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><!--一般用于拖拽时，所有item的抖动效果-->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="70"
+    android:fromDegrees="-2.0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse"
+    android:toDegrees="2.0" />

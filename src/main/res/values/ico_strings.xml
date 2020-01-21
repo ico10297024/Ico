@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ico_progress_default_title">提示</string>
+    <string name="ico_progress_default_message">请稍候，正在请求中...</string>
+    <string name="ico_cancel">取消</string>
+    <string name="ico_application_error">程序出错，请稍候再试!</string>
+</resources>
